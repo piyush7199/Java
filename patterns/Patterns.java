@@ -121,6 +121,66 @@ public class Patterns{
             System.out.println();
         }
     }
+
+    /*
+
+    ABCDE
+    ABCD
+    ABC
+    AB
+    A
+
+     */
+    public static void printAlphaReverseTriangle(int n){
+        for(int i = 0;i<n;i++){
+            char count = 'A';
+            for(int j = i;j<n;j++){
+                System.out.print(count);
+                count++;
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
+    A
+    BB
+    CCC
+    DDDD
+    EEEEE
+
+     */
+    public static void printAlphaSameTriangle(int n){
+        char count = 'A';
+        for(int i = 0;i<n;i++){
+            for(int j = 0;j<=i;j++){
+                System.out.print(count);
+            }
+            System.out.println();
+            count++;
+        }
+    }
+
+    /*
+
+     ****
+     *  *
+     *  *
+     ****
+
+     */
+    public static void printEmptySquare(int n) {
+        for(int i = 0;i<n;i++){
+            for(int j = 0; j<n;j++){
+                if(i == 0 || j == 0 || i == n - 1 || j == n - 1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         // printSquare(5);
         // printTriangle(5);
@@ -129,5 +189,8 @@ public class Patterns{
         // printReverseNumberTriangle(5); TODO
         // printCountTriangle(5);
         // printAlphaTriangle(5);
+        // printAlphaReverseTriangle(5);
+        // printAlphaSameTriangle(5);
+        printEmptySquare(4);
     }
 }
