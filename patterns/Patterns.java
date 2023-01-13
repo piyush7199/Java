@@ -73,9 +73,18 @@ public class Patterns{
         }
     }
 
+    /*
+
+    1 2 3 4 5
+    1 2 3 4
+    1 2 3
+    1 2
+    1
+
+     */
     public static void printReverseNumberTriangle(int n) {
-        for(int i = n;i>0;i--){
-            for(int j = 1;j<=i;j++){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=n-i+1;j++){
                 System.out.print(j+" ");
             }
             System.out.println();
@@ -271,6 +280,30 @@ public class Patterns{
 
     /*
 
+     *
+     * *
+     * * *
+     * * * *
+     * * * * *
+     * * * *
+     * * *
+     * *
+     *
+
+     */
+    public static void printOneSidedTriangle2(int n) {
+        for(int i = 1;i<=2*n-1;i++){
+            int stars = i;
+            if(i>n) stars = 2*n-i;
+            for(int j = 0;j<stars;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
     1
     0 1
     1 0 1
@@ -279,18 +312,12 @@ public class Patterns{
 
      */
     public static void printAlternative(int n){
-        boolean upperPrint = true;
         for(int i = 0;i<n;i++){
-            boolean print = upperPrint;
-            for(int j=0;j<=i;j++){
-                if(print){
-                    System.out.print(1+" ");
-                }else{
-                    System.out.print(0+" ");
-                }
-                print = !print;
+            int print = (i%2==0) ? 1 : 0;
+            for(int j=0;j<=i;j++) {
+                System.out.print(print);
+                print = 1 - print;
             }
-            upperPrint = !upperPrint;
             System.out.println();
         }
     }
@@ -392,11 +419,127 @@ public class Patterns{
             System.out.println();
         }
     }
+
+    /*
+
+     **********
+     ****  ****
+     ***    ***
+     **      **
+     *        *
+     *        *
+     **      **
+     ***    ***
+     ****  ****
+     **********
+
+     */
+    public static void pattern19(int n){
+        int spaces = 0;
+        for(int i = 0;i<n;i++){
+            for(int j=0;j<n-i;j++){
+                System.out.print("*");
+            }
+            for(int j=0;j<spaces;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<n-i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+            spaces += 2;
+        }
+        spaces -= 2;
+        for(int i = 0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            for(int j=0;j<spaces;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+            spaces -= 2;
+        }
+    }
+
+    /*
+
+     *        * [1,8,1]
+     **      ** [2,6,2]
+     ***    *** [3,4,3]
+     ****  **** [4,2,4]
+     ********** [5,0,5]
+     ****  **** [4,2,4]
+     ***    *** [3,4,3]
+     **      ** [2,6,2]
+     *        * [1,8,1]
+
+     */
+    public static void pattern20(int n){
+        int spaces = 2*n-2;
+        for(int i = 0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            for(int j=0;j<spaces;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            spaces -= 2;
+            System.out.println();
+        }
+        spaces = 2;
+        for(int i = 0;i<n-1;i++) {
+            for(int j=0;j<n-1-i;j++){
+                System.out.print("*");
+            }
+            for(int j=0;j<spaces;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<n-1-i;j++){
+                System.out.print("*");
+            }
+            spaces += 2;
+            System.out.println();
+        }
+    }
+
+    /*
+
+    4444444
+    4333334
+    4322234
+    4321234
+    4322234
+    4333334
+    4444444
+
+     */
+    public static void pattern22(int n) {
+        int count = 2*n-1;
+        for(int i = 0;i<count;i++){
+            for(int j=0;j<count;j++){
+                int top     = i;
+                int left    = j;
+                int right   = 2*n-2-j;
+                int buttom  = 2*n-2-i;
+                int min     = Math.min(Math.min(Math.min(top,left),buttom),right);
+                System.out.print(n-min);
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         // printSquare(5);
         // printTriangle(5);
         // printNumberTriangle(5);
         // printReverseTriangle(5);
+        // printReverseNumberTriangle(5);
         // printCountTriangle(5);
         // printAlphaTriangle(5);
         // printAlphaReverseTriangle(5);
@@ -406,11 +549,15 @@ public class Patterns{
         // printFullTriangle(5);
         // printReverseFullTriangle(5);
         // printDiamond(5); TODO this one
-        // printOneSidedTriangle(2); TODO change the logic
+        // printOneSidedTriangle(5); // TODO change the logic
         // printAlternative(5);
         // printATriangle(5);
         // printTwoNumberTriangle(5);
         // printCharTriangle(5);
         // printCharTriangle2(5);
+        //printOneSidedTriangle2(5);
+        // pattern19(5);
+        // pattern20(5);
+        pattern22(4);
     }
 }
