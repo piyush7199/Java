@@ -1,4 +1,4 @@
-package patterns;
+package practice.patterns;
 
 public class Patterns{
     /*

@@ -1,4 +1,4 @@
-package maths;
+package practice.maths;
 
 public class BasicMathPractice {
     public static int countDigit(int N){
