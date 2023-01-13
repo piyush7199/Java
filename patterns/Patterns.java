@@ -181,16 +181,236 @@ public class Patterns{
             System.out.println();
         }
     }
+
+    /*
+
+         *
+        ***
+       *****
+      *******
+     *********
+
+     */
+    public static void printFullTriangle(int n) {
+        for(int i = 0;i<n;i++){
+           for(int j=0;j<n-1;j++){
+               if(i+j>=n-1){
+                   System.out.print("*");
+               }else{
+                   System.out.print(" ");
+               }
+           }
+            System.out.print("*");
+           for(int j = n;j<n*2-1;j++){
+               if(j-i<=n-1){
+                   System.out.print("*");
+               }
+           }
+            System.out.println();
+        }
+    }
+
+    /*
+
+     *********
+      *******
+       *****
+        ***
+         *
+
+
+     */
+    public static void printReverseFullTriangle(int n) {
+        for(int i = 0;i<n;i++){
+            for(int j=2*n-1;j>n;j--){
+                if(i+j<=2*n-1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("*");
+            for(int j = n-1;j>0;j--){
+                if(j-i>0){
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+     * * * * *
+      * * * *
+       * * *
+        * *
+         *
+
+     */
+    public static void printDiamond(int n) {
+
+    }
+
+    public static void printOneSidedTriangle(int n) {
+        for(int i = 0;i<=2*n-1;i++){
+            for(int j = 0;j<i && i<=n;j++){
+                System.out.print("* ");
+            }
+            for(int j = i;j<=2*n-1 && i>n;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
+    1
+    0 1
+    1 0 1
+    0 1 0 1
+    1 0 1 0 1
+
+     */
+    public static void printAlternative(int n){
+        boolean upperPrint = true;
+        for(int i = 0;i<n;i++){
+            boolean print = upperPrint;
+            for(int j=0;j<=i;j++){
+                if(print){
+                    System.out.print(1+" ");
+                }else{
+                    System.out.print(0+" ");
+                }
+                print = !print;
+            }
+            upperPrint = !upperPrint;
+            System.out.println();
+        }
+    }
+
+    /*
+
+        A
+       ABA
+      ABCBA
+     ABCDCBA
+    ABCDEDCBA
+
+     */
+    public static void printATriangle(int n) {
+        for(int i = 0;i<n;i++){
+            char print = 'A';
+            for(int j=0;j<n-1;j++){
+                if(i+j>=n-1){
+                    System.out.print(print);
+                    print++;
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.print(print);
+            print--;
+            for(int j = n;j<n*2-1;j++){
+                if(j-i<=n-1){
+                    System.out.print(print);
+                    print--;
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
+        1                 1
+        1 2             2 1
+        1 2 3         3 2 1
+        1 2 3 4     4 3 2 1
+        1 2 3 4 5 5 4 3 2 1
+
+     */
+    public static void printTwoNumberTriangle(int n){
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=i;j++){
+                    System.out.print(j+" ");
+            }
+            for(int j = i+1;j<=2*n;j++){
+                if(i+j>2*n)
+                    System.out.print(2*n-j+1+" ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
+    E
+    D E
+    C D E
+    B C D E
+    A B C D E
+
+     */
+    public static void printCharTriangle(int n){
+        for(int i=0;i<n;i++){
+            char print = 'A';
+            print = (char) (print+n-1-i);
+            for(int j = 0;j<=i;j++){
+                System.out.print(print);
+                print++;
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+
+    E
+    E D
+    E D C
+    E D C B
+    E D C B A
+
+     */
+    public static void printCharTriangle2(int n) {
+        for(int i=0;i<n;i++){
+            char print = 'A';
+            print = (char) (print+n-1);
+            for(int j = 0;j<=i;j++){
+                System.out.print(print+" ");
+                print--;
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         // printSquare(5);
         // printTriangle(5);
         // printNumberTriangle(5);
         // printReverseTriangle(5);
-        // printReverseNumberTriangle(5); TODO
         // printCountTriangle(5);
         // printAlphaTriangle(5);
         // printAlphaReverseTriangle(5);
         // printAlphaSameTriangle(5);
-        printEmptySquare(4);
+        // printEmptySquare(4);
+        // printReverseNumberTriangle(5);
+        // printFullTriangle(5);
+        // printReverseFullTriangle(5);
+        // printDiamond(5); TODO this one
+        // printOneSidedTriangle(2); TODO change the logic
+        // printAlternative(5);
+        // printATriangle(5);
+        // printTwoNumberTriangle(5);
+        // printCharTriangle(5);
+        // printCharTriangle2(5);
     }
 }
