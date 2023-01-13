@@ -75,6 +75,6 @@ public class BasicMathPractice {
         // System.out.println(reverseNumber(2147448));
         // System.out.println(isPalindrome(-1221));
         // System.out.println(armstrongNumber(153));
-        System.out.println(gcd(25105,71530));
+        System.out.println(gcd(25105l,71530l));
     }
 }
