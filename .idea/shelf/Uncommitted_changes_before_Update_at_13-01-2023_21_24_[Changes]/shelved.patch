@@ -1,0 +1,63 @@
+Index: out/production/Web Deve/.idea/modules.xml
+===================================================================
+diff --git a/out/production/Web Deve/.idea/modules.xml b/out/production/Web Deve/.idea/modules.xml
+deleted file mode 100644
+--- a/out/production/Web Deve/.idea/modules.xml	(revision 6055c229fcf59549c578c45258de5b4907e93122)
++++ /dev/null	(revision 6055c229fcf59549c578c45258de5b4907e93122)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/Web Deve.iml" filepath="$PROJECT_DIR$/Web Deve.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: out/production/Web Deve/.idea/vcs.xml
+===================================================================
+diff --git a/out/production/Web Deve/.idea/vcs.xml b/out/production/Web Deve/.idea/vcs.xml
+deleted file mode 100644
+--- a/out/production/Web Deve/.idea/vcs.xml	(revision 6055c229fcf59549c578c45258de5b4907e93122)
++++ /dev/null	(revision 6055c229fcf59549c578c45258de5b4907e93122)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: out/production/Web Deve/.idea/misc.xml
+===================================================================
+diff --git a/out/production/Web Deve/.idea/misc.xml b/out/production/Web Deve/.idea/misc.xml
+deleted file mode 100644
+--- a/out/production/Web Deve/.idea/misc.xml	(revision 6055c229fcf59549c578c45258de5b4907e93122)
++++ /dev/null	(revision 6055c229fcf59549c578c45258de5b4907e93122)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: out/production/Web Deve/Web Deve.iml
+===================================================================
+diff --git a/out/production/Web Deve/Web Deve.iml b/out/production/Web Deve/Web Deve.iml
+deleted file mode 100644
+--- a/out/production/Web Deve/Web Deve.iml	(revision 6055c229fcf59549c578c45258de5b4907e93122)
++++ /dev/null	(revision 6055c229fcf59549c578c45258de5b4907e93122)
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
